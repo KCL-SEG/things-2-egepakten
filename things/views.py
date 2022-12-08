@@ -12,4 +12,4 @@ def thing_view(request):
         return redirect('things')
     else:
         form = ThingForm()
-    return render(request, 'thing.html',{'form':form})
+    return render(request, 'home.html',{'form':form})
