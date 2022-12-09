@@ -7,7 +7,7 @@ class ThingForm(forms.ModelForm):
         model = Thing
         fields = ['name', 'description', 'quantity']
 
-    name = forms.CharField()
+    name = forms.widgets.TextInput()
     description = forms.CharField(widget = forms.Textarea)
     quantity =  forms.IntegerField(
         validators=[
