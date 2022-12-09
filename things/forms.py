@@ -8,7 +8,7 @@ class ThingForm(forms.ModelForm):
         fields = ['name', 'description', 'quantity']
 
     name = forms.widgets.TextInput()
-    description = forms.Textarea
+    description = forms.widgets.Textarea()
     quantity =  forms.IntegerField(
         validators=[
             MaxValueValidator(100),
